@@ -25,6 +25,19 @@
 //5. Functions can OPTIONALLY take inputs, and OPTIONALLY return a single value. How do we specify inputs, and how do we specify outputs?
 /*inputs are parameters and outputs are arguments(what gets changed)*/
 //6. Scope: Functions can see and modify variables in parent or global scopes. The inverse is NOT true.
+function add(a){ // parent scope
+    return function double(a, b){
+        return a + b * 2; // child scope
+    }
+}
+if(!yellow){ //block scope
+    console.log("Non existent")
+}
 //7. Closures: Functions form closures around the data they house. If an object returned from the Function and is held in memory somewhere (referenced), that closure stays ALIVE, and data can continue to exist in these closures! 
-
+function add(g){
+    g = 3;
+    return function addX(x){ // this is a closure becuase it references g from the parent scope.
+        return x + g;
+    }
+}
 

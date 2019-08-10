@@ -33,3 +33,22 @@ console.log(myName); // prints => bob
 var myVariable = 1;
 var myVariable = true;
 myVariable = "someString";
+
+//var, let, const
+//var - can be used to as a global use of declaring variables
+//var name = "Josh";
+
+// let - used in a block scope, can reassign a variavble with let.
+let name = "josh";
+
+// const - used in block scope, but cannot reassign it's value
+const yourName = "Andy";
+
+//Hoisting 
+//a variable can be declared after it has been assigned. Variables get hoisted to the top of a control.log(variable). functions get hoisted to the top of your software before run time.
+//how functions and variables are hoisted before run time.
+function add(a,b){
+    return a + b;
+}
+var a;
+a = 14;
